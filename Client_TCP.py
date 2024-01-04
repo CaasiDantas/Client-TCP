@@ -14,7 +14,7 @@ try:
     client.connect((ip, porta))
     client.send(mensagem1_bytes)
     pacotes_recebidos = client.recv(1024).decode()
-    print(pacotes_recebidos)
+    print(f"A resposta recebida pelo o servidor foi {pacotes_recebidos}")
 except Exception as error:
     print("Houve um erro ao fazer a conexão")
     print(error)
