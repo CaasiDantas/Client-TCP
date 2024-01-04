@@ -16,7 +16,7 @@ try:
             print("Fim da conexão")
             break
         
-        pacotes_recebidos = client.recv(1024).decode()
+        pacotes_recebidos = client.recv(100000).decode()
         print(f"Mensagem do Servidor: {pacotes_recebidos}")
         
         if pacotes_recebidos == "tchau\n":
