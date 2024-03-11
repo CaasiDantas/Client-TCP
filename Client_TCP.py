@@ -15,14 +15,14 @@ try:
         mensagem = input("Mensagem do Cliente: ") + "\n"
         client.send(mensagem.encode()) 
         
-        if mensagem == "tchau\n":
+        if mensagem == "tchau\n" or "Tchau\n":
             print("Fim da conexão")
             break
         
         pacotes_recebidos = client.recv(100000).decode()
         print(f"Mensagem do Servidor: {pacotes_recebidos}")
         
-        if pacotes_recebidos == "tchau\n":
+        if pacotes_recebidos == "tchau\n" or "Tchau\n":
             print("Fim da conexão")
             break
     client.close()
